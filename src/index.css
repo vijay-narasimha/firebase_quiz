@@ -4,6 +4,12 @@
   --color-primary: #71c6dd;
 }
 
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 body {
   counter-reset: question;
   background-color: var(--color-bg);
@@ -30,25 +36,32 @@ body {
   color: #e1f6fb;
   opacity: 0.8;
   font-size: 23px;
+  
 }
-.login-btn:hover {
+.login-btn:is(:hover,:focus,:active){
   opacity: 1;
   color: var(--color-primary);
+
 }
+
 
 .start-btn {
   color: var(--color-white);
   font-size: 18px;
 }
-.start-btn:hover {
+.start-btn:is(:hover,:focus,:active) {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
 }
 input {
   border-radius: 6px;
   padding: 3px 4px;
-}
 
+}
+.home-input:focus{
+  outline: 2px solid var(--color-primary);
+
+}
 a {
   text-decoration: none;
   color: var(--color-white);
@@ -75,7 +88,7 @@ a:hover {
 }
 .submit-btn:hover {
   opacity: 1;
-  color: var(--color-primary);
+  color: var(--color-bg);
 }
 
 .mcq-create,
@@ -113,50 +126,62 @@ a:hover {
   max-width: 380px;
   font-size: 16px;
 }
-.score{
-    font-size: 20px;
+.score {
+  font-size: 20px;
 }
 
-.restart{
-    text-align: center;
-    font-size: 23px;
-    width:fit-content;
-    padding:.5rem .6rem;
-    margin:0 auto;
+.restart {
+  text-align: center;
+  font-size: 23px;
+  width: fit-content;
+  padding: 0.5rem 0.6rem;
+  margin: 0 auto;
+  border-radius: 10px;
 }
-.restart:hover{
-    border:1px solid var(--color-primary);
-
-}
-
-.custom-table{
-    max-width: 400px;
-    margin:0 auto;
-    
-}
-.table{
-    color:var(--color-white);
-    border:var(--color-white)
-}
-.question-box{
-border:1px solid var(--color-white);
-max-width: 500px;
-padding:1rem;
+.restart:hover {
+  border: 1px solid var(--color-primary);
 }
 
-
-.test-box{
-    height: 100vh;
+.custom-table {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.table {
+  color: var(--color-white);
+  border: var(--color-white);
+}
+.question-box {
+  border: 1px solid var(--color-white);
+  max-width: 500px;
+  padding: 1rem;
 }
 
-.timer{
-    font-size: 20px;
+.test-box {
+  height: 100vh;
+}
+
+.timer {
+  font-size: 20px;
+}
+
+.box-question {
+  font-size: 24px;
+}
+label {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.exit-btn, .exit-btn:hover{
+  color:red;
+  margin-right: auto;
 }
 
 .box-question{
-    font-size: 24px;
+  min-width: 420px;
+  min-height: 100px;
 }
-label{
-    margin-left:5px;
-    cursor:pointer;
+.next-btn{
+  color:var(--color-primary)
+  
 }

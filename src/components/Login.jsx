@@ -24,7 +24,8 @@ export default function Login() {
     const data = await getDocs(userCollection);
     data.docs.map(
       (doc) => (
-        setAdminname(doc.data().name), setAdminPassword(doc.data().password)
+        setAdminname(doc.data().name),
+         setAdminPassword(doc.data().password)
       )
     );
   }
@@ -66,7 +67,7 @@ export default function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <button className='btn btn-primary w-100 submit-btn'>Submit</button>
+              <button className='btn w-100 submit-btn'>Submit</button>
             </form>
           </div>
         </div>

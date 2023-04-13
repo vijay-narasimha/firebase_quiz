@@ -15,7 +15,7 @@ res.docs.map(doc=>(
   array.push(doc.data())
 ))
 array.sort((a,b)=>b.score-a.score)
-array.sort((a,b)=>b.time-a.time)
+// array.sort((a,b)=>b.time-a.time)
 array=array.slice(0,10)
 setTop(array)
 }
@@ -33,7 +33,7 @@ const top10=top.map((result,index)=>{
 
   return (
     <>
-    <div class='box-container'>
+    <div className='box-container'>
     <div className="box d-flex flex-column justify-content-center align-items-center">
       <div className='score mb-3'>Score:{result.score}</div>
       <div>Completed in {result.time} Seconds </div>
