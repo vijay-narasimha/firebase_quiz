@@ -16,7 +16,7 @@ res.docs.map(doc=>(
 ))
 array.sort((a,b)=>b.score-a.score)
 // array.sort((a,b)=>b.time-a.time)
-array=array.slice(0,10)
+array=array.slice(0,8)
 setTop(array)
 }
 useEffect(()=>{
